@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Fecha nacimiento</ion-label>
+    <!-- <ion-input type="date" [(ngModel)]="fecha_nacimiento" min="{{fechaMin}}" max=""></ion-input> -->
+    <ion-input type="date" [(ngModel)]="fecha_nacimiento" max="{{fechaMax}}"></ion-input>
+    <p>Edad: {{edad}}</p>
+    <ion-button (click)="calcularEdad()">Calcular edad</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Fecha registro</ion-label>
+    <!-- <ion-input type="date" [(ngModel)]="fecha_nacimiento" min="{{fechaMin}}" max=""></ion-input> -->
+    <ion-input type="date" max="{{fechaHoy}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Rut</ion-label>
+    <ion-input type="text" [(ngModel)]="rut"></ion-input>
+    <p>VALIDO: {{esValido}}</p>
+    <ion-button (click)="validarRut()">Validar rut</ion-button>
+  </ion-item>
+</ion-content>
